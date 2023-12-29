@@ -13,7 +13,7 @@ O sistema de postes inteligentes visa criar uma solução IoT (Internet of Thing
     * Desempenha o papel do módulo atenuador, controlando a intensidade luminosa dos postes associados (em desenvolvimento).
     * Cada módulo mestre está associado a cada conjunto de 3 postes.
 
-    <img src = "Imagens/modulo_mestre(completo).PNG">
+    <img src = "OVERVIEW/Imagens/modulo_mestre(completo).PNG">
 
 2. Módulo Atenuador (ESP32 com Dimmer):
 

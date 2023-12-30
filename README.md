@@ -1,4 +1,4 @@
-# Sistema de Postes Inteligentes com ESP32CAM
+# Sistema de Postes Inteligentes com ESP32
 
 ## Objetivo Geral
 

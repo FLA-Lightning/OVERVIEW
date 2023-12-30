@@ -12,6 +12,7 @@ O sistema de postes inteligentes visa criar uma solução IoT (Internet of Thing
     * Envia imagens para processamento em uma instância na Google Cloud para detecção de pessoas.
     * Desempenha o papel do módulo atenuador, controlando a intensidade luminosa dos postes associados (em desenvolvimento).
     * Cada módulo mestre está associado a cada conjunto de 3 postes.
+    * Abaixo está o 3D de como deve ficar o módulo mestre, a ideia inicial é que essas duas placas fiquem empilhadas.
 
     <img src = "Imagens/modulo_mestre(completo).png">
 

@@ -23,7 +23,7 @@ O sistema de postes inteligentes visa criar uma solução IoT (Internet of Thing
     * Recebe informações de controle de intensidade luminosa dos módulos mestres e ajusta a luminosidade de acordo.
     * Abaixo está o 3D de como deve ficar o módulo.
 
-    <img src = "Imagens/modulo_atenuador.png>
+    <img src = "Imagens/modulo_atenuador.png">
 
 3. Servidor MQTT (Mosquitto - AWS):
 

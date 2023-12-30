@@ -21,6 +21,9 @@ O sistema de postes inteligentes visa criar uma solução IoT (Internet of Thing
     * O módulo atenuador é composto apenas por um dimmer e uma ESP32.
     * Responsável por ajustar a intensidade luminosa dos postes que não possuem o módulo mestre.
     * Recebe informações de controle de intensidade luminosa dos módulos mestres e ajusta a luminosidade de acordo.
+    * Abaixo está o 3D de como deve ficar o módulo.
+
+    <img src = "Imagens/modulo_atenuador.png>
 
 3. Servidor MQTT (Mosquitto - AWS):
 
@@ -29,32 +32,27 @@ O sistema de postes inteligentes visa criar uma solução IoT (Internet of Thing
 
 4. Análise de Imagem com IA (Google Cloud):
 
-    Processa as imagens capturadas pelos módulos mestres utilizando inteligência artificial.
-    Foco na detecção de pessoas nas imagens.
-Fluxo de Funcionamento
+    * Processa as imagens capturadas pelos módulos mestres utilizando inteligência artificial.
+    * Foco na detecção de pessoas nas imagens.
 
-    Captura de Imagens e Dados Ambientais:
-        O módulo mestre (ESP32CAM) captura imagens periodicamente.
-        Os dados ambientais (temperatura, pressão, altitude, umidade) são lidos pelo sensor BME280.
+### Fluxo de Funcionamento
 
-    Envio para o Servidor MQTT:
-        As imagens e dados ambientais são enviados para um servidor MQTT hospedado na AWS.
-        O servidor MQTT gerencia a comunicação entre os módulos e o sistema em nuvem.
+1. Captura de Imagens e Dados Ambientais:
 
-    Análise de Imagem por IA (Posterior):
-        As imagens enviadas para o servidor MQTT podem ser processadas posteriormente por um sistema de inteligência artificial.
-        O foco é na detecção de pessoas nas imagens capturadas.
+    * O módulo mestre (ESP32CAM) captura imagens periodicamente.
+    * Os dados ambientais (temperatura, pressão, altitude, umidade) são lidos pelo sensor BME280.
 
-    Controle de Intensidade Luminosa (Em Desenvolvimento):
-        O módulo mestre também tem a funcionalidade de atuar como um módulo atenuador, controlando a intensidade luminosa dos postes.
-        Essa parte do sistema está em desenvolvimento.
+2. Envio para o Servidor MQTT:
 
-Observações Adicionais
+    * As imagens e dados ambientais são enviados para um servidor MQTT hospedado na AWS.
+    * O servidor MQTT gerencia a comunicação entre os módulos e o sistema em nuvem.
 
-    Segurança:
-        As credenciais sensíveis, como informações de rede Wi-Fi e MQTT, são mantidas em arquivos separados (secrets.h) para garantir segurança.
+3. Análise de Imagem por IA (Posterior):
 
-    Evolução do Projeto:
-        O sistema é expansível e pode evoluir para incluir mais recursos e melhorias com base nos requisitos específicos.
+    * As imagens enviadas para o servidor MQTT podem ser processadas posteriormente por um sistema de inteligência artificial.
+    * O foco é na detecção de pessoas nas imagens capturadas.
 
-Este sistema de postes inteligentes integra captura de imagens, coleta de dados ambientais e futuramente controle de intensidade luminosa, proporcionando uma solução completa para monitoramento urbano.
+4. Controle de Intensidade Luminosa (Em Desenvolvimento):
+
+    * O módulo mestre também tem a funcionalidade de atuar como um módulo atenuador, controlando a intensidade luminosa dos postes.
+    * Essa parte do sistema está em desenvolvimento.

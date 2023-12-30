@@ -52,7 +52,10 @@ O sistema de postes inteligentes visa criar uma solução IoT (Internet of Thing
     * As imagens enviadas para o servidor MQTT podem ser processadas posteriormente por um sistema de inteligência artificial.
     * O foco é na detecção de pessoas nas imagens capturadas.
 
-4. Controle de Intensidade Luminosa (Em Desenvolvimento):
+4. Controle de Intensidade Luminosa:
 
     * O módulo mestre também tem a funcionalidade de atuar como um módulo atenuador, controlando a intensidade luminosa dos postes.
-    * Essa parte do sistema está em desenvolvimento.
+    * De acordo com as informações recebiadas pela análise dos dados o módulo mestre e os módulos atenuadores alteram a intensidade dos seus respectivos postes.
+    * Aqui em baixo está uma representação de como deve funcionar o sistema. O poste 'P1' estará equipado com o módulo mestre com a câmera apontada em direção aos outros 3 postes (que estão equipados com o módulo atenuador). Ao detectar alguma pessoa nesse raio todos as luzes dos postes terão a intensidade luminosa aumentada.
+
+    <img src = "Imagens/simulação1.png">

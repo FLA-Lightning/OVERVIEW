@@ -2,7 +2,7 @@
 
 ## Objetivo Geral
 
-O sistema de postes inteligentes visa criar uma solução IoT (Internet of Things) que utiliza módulos ESP32CAM instalados em postes para monitoramento, análise de imagem e coleta de dados ambientais. O sistema tem como principais funcionalidades a captura de imagens, o envio dessas imagens via MQTT (usando o servidor Mosquitto) para análise por meio de inteligência artificial (processamento realizado em uma instância na Google Cloud), a leitura de dados ambientais por meio de um sensor BME280, e a capacidade de ajustar a intensidade luminosa dos postes.
+O sistema de postes inteligentes visa criar uma solução IoT (Internet of Things) que utiliza microcontroladores (ESP32) instalados em postes para monitoramento, análise de imagem e coleta de dados ambientais. O sistema tem como principais funcionalidades a captura de imagens, o envio dessas imagens via MQTT para análise por meio de inteligência artificial (processamento realizado em uma instância na Google Cloud), a leitura de dados ambientais por meio de um sensor BME280, e a capacidade de ajustar a intensidade luminosa dos postes.
 
 ### Componentes Principais
 
@@ -25,11 +25,6 @@ O sistema de postes inteligentes visa criar uma solução IoT (Internet of Thing
 
     <img src = "Imagens/modulo_atenuador.png">
 
-3. Servidor MQTT (Mosquitto - AWS):
-
-    Hospeda um servidor Mosquitto MQTT em uma instância da AWS.
-    Gerencia a comunicação entre os módulos e o sistema em nuvem.
-
 4. Análise de Imagem com IA (Google Cloud):
 
     * Processa as imagens capturadas pelos módulos mestres utilizando inteligência artificial.
@@ -42,14 +37,14 @@ O sistema de postes inteligentes visa criar uma solução IoT (Internet of Thing
     * O módulo mestre (ESP32CAM) captura imagens periodicamente.
     * Os dados ambientais (temperatura, pressão, altitude, umidade) são lidos pelo sensor BME280.
 
-2. Envio para o Servidor MQTT:
+2. Envio para o MQTT Broker:
 
-    * As imagens e dados ambientais são enviados para um servidor MQTT hospedado na AWS.
-    * O servidor MQTT gerencia a comunicação entre os módulos e o sistema em nuvem.
+    * As imagens e dados ambientais são enviados para o MQTT Broker.
+    * O Broker MQTT gerencia a comunicação entre os módulos e o sistema em nuvem.
 
 3. Análise de Imagem por IA (Posterior):
 
-    * As imagens enviadas para o servidor MQTT podem ser processadas posteriormente por um sistema de inteligência artificial.
+    * As imagens enviadas para o servidor MQTT serão processadas posteriormente por um sistema de inteligência artificial.
     * O foco é na detecção de pessoas nas imagens capturadas.
 
 4. Controle de Intensidade Luminosa:
